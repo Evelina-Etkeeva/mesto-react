@@ -116,15 +116,16 @@ import {baseUrl, headers} from './utils';
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: data,
+        avatar: data.avatar_img
       })
-      .then(res => {
+    })
+    .then(res => {
         if (res.ok) {
+          // console.log(res.json())
           return res.json();
         } else{
           return Promise.reject(`Ошибка: ${res.status}`);
         }    
-      })
     })  
   }
 };

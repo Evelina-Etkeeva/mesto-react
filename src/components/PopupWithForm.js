@@ -16,6 +16,7 @@ function PopupWithForm(props) {
           className="form form_content_add-card"
           name={`${props.name}`}
           noValidate
+          onSubmit={props.onSubmit}
         >
           <h2 className="form__header">{props.title}</h2>
           {props.children}
