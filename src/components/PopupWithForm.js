@@ -11,10 +11,10 @@ function PopupWithForm(props) {
           aria-label="close"
           className="button button_type_close popup__close-btn"
           onClick={props.onClose}
-        ></button>
+        />
         <form
           className="form form_content_add-card"
-          name={`${props.name}`}
+          name={props.name}
           noValidate
           onSubmit={props.onSubmit}
         >
@@ -24,7 +24,7 @@ function PopupWithForm(props) {
             type="submit"
             className="button button_type_save popup__save-btn"
             value="Сохранить"
-          >{`${props.buttonText ? props.buttonText : "Сохранить"}`}</button>
+          >{props.buttonText ? props.buttonText : "Сохранить"}</button>
         </form>
       </div>
     </div>
